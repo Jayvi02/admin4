@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<div class="container">
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h2>Video Admin</h2>
+        </div>
+        <nav>
+            <ul>
+                <li class="active"><a href="#"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="#"><i class="fas fa-video"></i> Videos</a></li>
+                <li><a href="users.html"><i class="fas fa-users"></i> Users</a></li>
+                <li><a href="#"><i class="fas fa-chart-bar"></i> Analytics</a></li>
+                <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                <li><a href="notices.html"><i class="fas fa-sticky-note"></i> Notice</a></li>
+
+            </ul>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </div>
+    </aside>
+
+    <div class="main-content">
+        <header>
+            <div class="search-container">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search...">
+            </div>
+            <div class="user-profile">
+                <span class="notification"><i class="fas fa-bell"></i></span>
+                <div class="profile-image">
+                    <img src="https://via.placeholder.com/40" alt="Profile">
+                </div>
+                <span>Admin User</span>
+            </div>
+        </header>
+
+        <main>
+            <div class="dashboard-header">
+                <h1>Video Dashboard</h1>
+                <a href="notices.html"><button class="add-video-btn"><i class="fas fa-plus"></i> Add New Notice</button></a>
+            </div>
+
+            <div class="stats-cards">
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-video"></i></div>
+                    <div class="card-info">
+                        <h3>Total Videos</h3>
+                        <p>124</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-eye"></i></div>
+                    <div class="card-info">
+                        <h3>Total Views</h3>
+                        <p>45.2K</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-users"></i></div>
+                    <div class="card-info">
+                        <h3>Subscribers</h3>
+                        <p>1.8K</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-comment"></i></div>
+                    <div class="card-info">
+                        <h3>Comments</h3>
+                        <p>3.4K</p>
+                    </div>
+                </div>
+            </div>
+
+            <section class="video-section">
+                <div class="section-header">
+                    <h2>Recent Videos</h2>
+                    <div class="filter-options">
+                        <select>
+                            <option>All Categories</option>
+                            <option>Education</option>
+                            <option>Entertainment</option>
+                            <option>Music</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="video-grid">
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <img src="https://via.placeholder.com/300x180" alt="Video thumbnail">
+                            <span class="duration">10:25</span>
+                        </div>
+                        <div class="video-details">
+                            <h3>Sample Video 1</h3>
+                            <p class="category">Education</p>
+                            <div class="video-stats">
+                                <span><i class="fas fa-eye"></i> 1.2K</span>
+                                <span><i class="fas fa-thumbs-up"></i> 88</span>
+                            </div>
+                            <div class="video-actions">
+                                <button class="edit-btn"><i class="fas fa-edit"></i> Edit</button>
+                                <button class="delete-btn"><i class="fas fa-trash"></i> Delete</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <img src="https://via.placeholder.com/300x180" alt="Video thumbnail">
+                            <span class="duration">7:15</span>
+                        </div>
+                        <div class="video-details">
+                            <h3>Sample Video 2</h3>
+                            <p class="category">Entertainment</p>
+                            <div class="video-stats">
+                                <span><i class="fas fa-eye"></i> 3.4K</span>
+                                <span><i class="fas fa-thumbs-up"></i> 245</span>
+                            </div>
+                            <div class="video-actions">
+                                <button class="edit-btn"><i class="fas fa-edit"></i> Edit</button>
+                                <button class="delete-btn"><i class="fas fa-trash"></i> Delete</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <img src="https://via.placeholder.com/300x180" alt="Video thumbnail">
+                            <span class="duration">15:42</span>
+                        </div>
+                        <div class="video-details">
+                            <h3>Sample Video 3</h3>
+                            <p class="category">Music</p>
+                            <div class="video-stats">
+                                <span><i class="fas fa-eye"></i> 5.7K</span>
+                                <span><i class="fas fa-thumbs-up"></i> 412</span>
+                            </div>
+                            <div class="video-actions">
+                                <button class="edit-btn"><i class="fas fa-edit"></i> Edit</button>
+                                <button class="delete-btn"><i class="fas fa-trash"></i> Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Notice Modal -->
+        <div id="notice-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" id="close-modal">&times;</span>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Notices</title>
+    <link rel="stylesheet" href="notices.css" />
+</head>
+<body>
+<h1>Notices</h1>
+<div id="notice-content"></div>
+<div id="add-notice-box">
+    <button id="add-notice-btn">Add New Notice</button>
+</div>
+
+<!-- Modal for adding a new notice -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <h2>Add New Notice</h2>
+        <label for="notice-title">Title:</label>
+        <input type="text" id="notice-title" />
+        <label for="notice-description">Description:</label>
+        <textarea id="notice-description"></textarea>
+        <button id="save-notice-btn">Save</button>
+        <button id="cancel-notice-btn">Cancel</button>
+    </div>
+</div>
+
+<script src="notices.js"></script>
+</body>
+</html>
